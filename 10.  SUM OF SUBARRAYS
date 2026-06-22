@@ -1,0 +1,13 @@
+a = [2, 5, -5, 14, 8, 9, -11]
+b = 2
+max_sum = float('-inf')
+i = 0
+while i <= len(a) - b:
+    current_sum = 0
+    for j in range(i, i + b):
+        current_sum += a[j]
+        
+    if current_sum > max_sum:
+        max_sum = current_sum
+    i += b
+print(max_sum)
