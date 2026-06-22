@@ -1,0 +1,10 @@
+s=["rajU","ram","Anu"]
+vc=[]
+v="aeiouAEIOU"
+for word in s:
+    c=0
+    for char in word:
+        if char in v:
+            c=c+1
+    vc.append(c)
+print(vc)
