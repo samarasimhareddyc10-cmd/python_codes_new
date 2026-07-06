@@ -39,5 +39,13 @@ create table b7 (name varchar(10), skill set("C","C++","Java","Python"));
 insert into b7 values("Gill","Python");
 select * from b7;
 ### UNIQUE
+create table b8(id int unique, name char(10));
+desc b8;
+insert into b8 values(1,"warner");
+insert into b8 values(2,"smith");
+insert into b8 values(3,"starc");
+insert into b8 values(4,"head");
+desc b8;
+select * from b8;
 
 
