@@ -1,0 +1,43 @@
+### CREATE DATABASE
+create database HITS;
+use HITS;
+### NORMAL TABLE
+create table h1(age int, name varchar(10));
+insert into h1 values(1,"Bobby");
+insert into h1 values(2,"John");
+insert into h1 values(3,"Benny");
+insert into h1 values(4,"Martin");
+desc h1;
+select * from h1;
+### PRIMARY KEY
+create table b1(id int primary key, name char(10));
+desc b1;
+insert into b1 values(1,"curran");
+insert into b1 values(2,"jacob");
+insert into b1 values(3,"phil");
+insert into b1 values(4,"banton");
+desc b1;
+select * from b1;
+### AUTO_INCREMENT PRIMARY KEY
+create table b2(id int auto_increment primary key, name char(10));
+desc b2;
+### DEFAULT
+create table b3(id int, name char(10) default "Bobby");
+desc b3;
+### DUPLICATE COLUMN
+create table b4 select * from b3;
+select * from b4;
+### DUPLICATE DATA
+create table b5 select * from b2 where 1=0;
+desc b5;
+### ENUMERATOR
+create table b6 (sno int, name char(10), gen enum("male","female"));
+insert into b6 values(1,"siraj", "male");
+select * from b6;
+### SET
+create table b7 (name varchar(10), skill set("C","C++","Java","Python"));
+insert into b7 values("Gill","Python");
+select * from b7;
+### UNIQUE
+
+
