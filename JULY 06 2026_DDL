@@ -47,5 +47,14 @@ insert into b8 values(3,"starc");
 insert into b8 values(4,"head");
 desc b8;
 select * from b8;
+### ALTER
+create database HIT;
+use HIT;
+create table students(id int, name varchar(10));
+alter table students add age int;
+desc students;
+alter table students add (dept varchar(10), gen char(10));
+alter table students modify column dept  varchar(20);
+select * from students;
 
 
