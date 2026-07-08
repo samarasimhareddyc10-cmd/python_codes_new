@@ -1,0 +1,37 @@
+DATABASE👌:
+create database stu1;
+use ins1;
+create table stu1(name varchar(20), mark int);
+insert into stu1 values("varun",54);
+insert into stu1 values("bhuvi",86);
+select * from stu1;
+
+PYCHARM SQL CONNECTOR 🙌:
+from tkinter import *
+import mysql.connector
+con=mysql.connector.connect(host='localhost',user='root',password='hits1234',database='ins1')
+cursor=con.cursor()
+def add():
+    cursor.execute('insert into stu1(name,mark) values (%s,%s)',(e1.get(),e2.get()))
+    con.commit()
+    e1.delete(0,END)
+    e2.delete(0,END)
+def avg1():
+    cursor.execute('select avg(mark) from stu1')
+    a=cursor.fetchone()
+    l4.configure(text="Average=%.2f"%a[0])
+root=Tk()
+root.geometry("500x400")
+root.title("stu1 marks")
+Label(root,text="name").pack()
+e1=Entry(root)
+e1.pack()
+Label(root,text="mark").pack()
+e2=Entry(root)
+e2.pack()
+Button(root,text="add",command=add).pack()
+Button(root,text="show avg",command=avg1).pack()
+l4=Label(root,text=" ")
+l4.pack(pady=10)
+root.mainloop()
+con.close()
